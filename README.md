@@ -18,15 +18,6 @@ https://stackoverflow.com/questions/59262706/k8s-hpa-cant-get-the-cpu-informatio
 
 ---
 
-### 4. Activate Cluster Autoscale ### 
-
-The first step is prepare the cluster to automatically increase the number of nodes. 
-To activate autoscale go to DigitalOcean cluster page to define the maximum number of nodes. 
-
-![Activate Autoscaling](./pictures/generatetoken.jpg)
-
----
-
 ### 5. Deploying an Autoscalable Application ###
 
 
@@ -45,10 +36,4 @@ Check the HPA with the command '''kubectl describe hpa hello'''
 Check the number of pods and nodes scaling up/down depending the number of traffic generators. To scale traffic generators use the command '''kubectl scale deployment/load-generator --replicas 2''' 
 Where *--replicas 2* defines the creation of 2 pods
 
-Use the following commands to check the scaling of your cluster:
-
-'''kubectl get pods'''
-'''kubectl get nodes'''
-'''kubectl describe hpa hello'''
-'''kubectl get configmap cluster-autoscaler-status -n kube-system -oyaml'''
 
