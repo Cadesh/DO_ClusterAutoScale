@@ -1,4 +1,4 @@
-# CLUSTER AUTOSCALE #
+# K8S AUTOSCALABLE DEPLOYMENTS #
 
 ### 1. Introduction ###
 
@@ -47,12 +47,8 @@ Where *--replicas 2* defines the creation of 2 pods
 
 Use the following commands to check the scaling of your cluster:
 
-'''
-kubectl get pods
-kubectl get nodes
-kubectl describe hpa hello
-kubectl get configmap cluster-autoscaler-status -n kube-system -oyaml
-
-
-'''
+'''kubectl get pods'''
+'''kubectl get nodes'''
+'''kubectl describe hpa hello'''
+'''kubectl get configmap cluster-autoscaler-status -n kube-system -oyaml'''
 
